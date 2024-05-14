@@ -21,9 +21,9 @@ class GoogleDorking(object):
             self.url = url + '/customsearch/v1'
         self.verify_ssl = config.get('verify_ssl')
 
-    def make_rest_call(self, url, method, data=None, params=None):
+    def make_rest_call(self, endpoint, method, data=None, params=None):
         try:
-            url = self.url + url + '?key={0}'.format(self.api_key)
+            url = self.url + endpoint + '?key={0}'.format(self.api_key)
             headers = {
                 'Content-Type': 'application/json'
             }

@@ -1,0 +1,201 @@
+{
+  "name": "google-dorking",
+  "version": "1.0.0",
+  "label": "Google Dorking",
+  "description": "Google Dorking refers to the practice of using advanced search operators in Google's search engine to discover information that may not be readily accessible through conventional search queries.",
+  "publisher": "Fortinet",
+  "cs_approved": true,
+  "cs_compatible": true,
+  "help_online": "",
+  "icon_small_name": "small.png",
+  "icon_large_name": "large.png",
+  "category": "Threat Intelligence",
+  "configuration": {
+    "fields": [
+      {
+        "title": "Server URL",
+        "description": "Specify the URL of the Google Dorking server to connect and perform automated operations.",
+        "type": "text",
+        "name": "server_url",
+        "required": true,
+        "editable": true,
+        "visible": true,
+        "value": "https://www.googleapis.com",
+        "tooltip": "Specify the URL of the Google Dorking server to connect and perform automated operations."
+      },
+      {
+        "title": "API Key",
+        "description": "Specify the API key to access the endpoint to connect and perform the automated operations",
+        "required": true,
+        "editable": true,
+        "visible": true,
+        "type": "password",
+        "name": "api_key",
+        "tooltip": "Specify the API key to access the endpoint to connect and perform the automated operations"
+      },
+      {
+        "title": "Verify SSL",
+        "description": "Specifies whether the SSL certificate for the server is to be verified. By default, this option is set to True.",
+        "name": "verify_ssl",
+        "type": "checkbox",
+        "required": false,
+        "editable": true,
+        "visible": true,
+        "value": true,
+        "tooltip": "Specifies whether the SSL certificate for the server is to be verified. By default, this option is set to True."
+      }
+    ]
+  },
+  "operations": [
+    {
+      "operation": "custom_search",
+      "title": "Custom Search",
+      "description": "A custom search refers to the ability to create a personalized search engine tailored to the specific needs of a website's audience, providing a customized and efficient way for users to find content within a website.",
+      "category": "investigation",
+      "annotation": "custom_search",
+      "enabled": true,
+      "parameters": [
+        {
+          "title": "Search Engine ID",
+          "description": "Specify the Programmable Search Engine you want to use to perform this search. The search engine must be created with the Control Panel Note: The Search Engine ID (cx) can be of different format (e.g. 8ac1ab64606d234f1)",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "cx",
+          "value": "017576662512468239146:omuauf_lfve",
+          "placeholder": "e.g 017576662512468239146:omuauf_lfve",
+          "tooltip": "Specify the Programmable Search Engine you want to use to perform this search. The search engine must be created with the Control Panel Note: The Search Engine ID (cx) can be of different format (e.g. 8ac1ab64606d234f1)"
+        },
+        {
+          "title": "Search Query",
+          "description": "A search query refers to the text or keywords entered by a user into a search engine when they are looking for information, documents, websites, or any other content.",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "q",
+          "value": "lectures",
+          "placeholder": "e.g lectures",
+          "tooltip": "A search query refers to the text or keywords entered by a user into a search engine when they are looking for information, documents, websites, or any other content.. Note: The limit on the length of the search request should be within 2048 characters."
+        },
+        {
+          "title": "Count",
+          "description": "Specify the maximum count of records that you want this operation to fetch from Google Dorking. By default, this option is set to 10, and valid values are integers between 1 and 10.",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "type": "integer",
+          "tooltip": "Specify the maximum count of records that you want this operation to fetch from Google Dorking. By default, this option is set to 10, and valid values are integers between 1 and 10.",
+          "name": "num",
+          "value": 10
+        },
+        {
+          "title": "Start",
+          "description": "Specify the index of the first result to return. The default number of results per page is 10, so &start=11 would start at the top of the second page of results. Note: The JSON API will never return more than 100 results, even if more than 100 documents match the query, so setting the sum of start + count to a number greater than 100 will produce an error. Also note that the maximum value for count is 10.",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "type": "integer",
+          "tooltip": "Specify the index of the first result to return. The default number of results per page is 10, so &start=11 would start at the top of the second page of results. Note: The JSON API will never return more than 100 results, even if more than 100 documents match the query, so setting the sum of start + count to a number greater than 100 will produce an error. Also note that the maximum value for count is 10.",
+          "name": "start",
+          "value": 1
+        },
+        {
+          "title": "Additional Fields",
+          "name": "additional_fields",
+          "type": "json",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "value": {
+            "sort": "date",
+            "safe": "active"
+          },
+          "tooltip": "Additional fields, in the JSON format, based on which you want to retrieve details from Google Dorking.",
+          "description": "Additional fields, in the JSON format, based on which you want to retrieve details from Google Dorking. For reference, you can refer this link https://developers.google.com/custom-search/v1/reference/rest/v1/cse/list#request"
+        }
+      ],
+      "output_schema": {
+        "kind": "",
+        "url": {
+          "type": "",
+          "template": ""
+        },
+        "queries": {
+          "previousPage": [
+            {
+              "title": "",
+              "totalResults": "",
+              "searchTerms": "",
+              "count": "",
+              "startIndex": "",
+              "inputEncoding": "",
+              "outputEncoding": "",
+              "safe": "",
+              "cx": ""
+            }
+          ],
+          "request": [
+            {
+              "title": "",
+              "totalResults": "",
+              "searchTerms": "",
+              "count": "",
+              "startIndex": "",
+              "inputEncoding": "",
+              "outputEncoding": "",
+              "safe": "",
+              "cx": ""
+            }
+          ],
+          "nextPage": [
+            {
+              "title": "",
+              "totalResults": "",
+              "searchTerms": "",
+              "count": "",
+              "startIndex": "",
+              "inputEncoding": "",
+              "outputEncoding": "",
+              "safe": "",
+              "cx": ""
+            }
+          ]
+        },
+        "context": {
+          "title": "",
+          "facets": [
+            [
+              {
+                "anchor": "",
+                "label": "",
+                "label_with_op": ""
+              }
+            ]
+          ]
+        },
+        "searchInformation": {
+          "searchTime": "",
+          "formattedSearchTime": "",
+          "totalResults": "",
+          "formattedTotalResults": ""
+        },
+        "items": [
+          {
+            "kind": "",
+            "title": "",
+            "htmlTitle": "",
+            "link": "",
+            "displayLink": "",
+            "snippet": "",
+            "htmlSnippet": "",
+            "cacheId": "",
+            "formattedUrl": "",
+            "htmlFormattedUrl": ""
+          }
+        ]
+      }
+    }
+  ]
+}

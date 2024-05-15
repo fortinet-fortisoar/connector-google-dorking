@@ -1,0 +1,95 @@
+{
+  "type": "workflow_collections",
+  "data": [
+    {
+      "uuid": "83088474-8126-4f0f-b69a-67fcbf5bb95b",
+      "@type": "WorkflowCollection",
+      "workflows": [
+        {
+          "@type": "Workflow",
+          "uuid": "51da685b-6d1a-4b93-9248-ad295ce693b6",
+          "collection": "/api/3/workflow_collections/83088474-8126-4f0f-b69a-67fcbf5bb95b",
+          "steps": [
+            {
+              "uuid": "fce45902-09fc-4aaa-a81f-9f03acd39250",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "523e588f-aa96-4073-8a2d-9774fcc9c346",
+              "@type": "WorkflowStep",
+              "name": "Custom Search",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Google Dorking",
+                "config": "",
+                "params": {
+                  "cx": "017576662512468239146:omuauf_lfve",
+                  "q": "lectures",
+                  "num": 10,
+                  "start": 1,
+                  "additional_fields": {
+                    "sort": "date",
+                    "safe": "active"
+                  }
+                },
+                "version": "1.0.0",
+                "connector": "google-dorking",
+                "operation": "custom_search",
+                "operationTitle": "Custom Search"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "A custom search refers to the ability to create a personalized search engine tailored to the specific needs of a website's audience, providing a customized and efficient way for users to find content within a website.",
+          "name": "Custom Search",
+          "tag": "#Google Dorking",
+          "recordTags": [
+            "Google",
+            "google-dorking"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/fce45902-09fc-4aaa-a81f-9f03acd39250",
+          "routes": [
+            {
+              "uuid": "06cd58a9-eba5-4c74-a65f-83ec70c095ae",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Custom Search",
+              "sourceStep": "/api/3/workflow_steps/fce45902-09fc-4aaa-a81f-9f03acd39250",
+              "targetStep": "/api/3/workflow_steps/523e588f-aa96-4073-8a2d-9774fcc9c346"
+            }
+          ]
+        }
+      ],
+      "name": "Sample - Google Dorking - 1.0.0",
+      "description": "Google Dorking refers to the practice of using advanced search operators in Google's search engine to discover information that may not be readily accessible through conventional search queries.",
+      "visible": true,
+      "recordTags": [
+        "Google",
+        "google-dorking"
+      ]
+    }
+  ]
+}

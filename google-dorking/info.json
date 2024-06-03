@@ -75,9 +75,38 @@
           "visible": true,
           "type": "text",
           "name": "q",
-          "value": "lectures",
           "placeholder": "e.g lectures",
           "tooltip": "A search query refers to the text or keywords entered by a user into a search engine when they are looking for information, documents, websites, or any other content.. Note: The limit on the length of the search request should be within 2048 characters."
+        },
+        {
+          "title": "Include Phrase",
+          "description": "Specify a word or phrase that all documents in the search results must contain.",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "exactTerms",
+          "tooltip": "Specify a word or phrase that all documents in the search results must contain."
+        },
+        {
+          "title": "Exclude Phrase",
+          "description": "Specify a word or phrase that should not appear in any documents in the search results.",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "excludeTerms",
+          "tooltip": "Specify a word or phrase that should not appear in any documents in the search results."
+        },
+        {
+          "title": "Safe Search",
+          "description": "Select to enable the SafeSearch filtering. By default, this is set to false.",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "type": "checkbox",
+          "name": "safe",
+          "tooltip": "Select to enable the SafeSearch filtering. By default, this is set to false."
         },
         {
           "title": "Count",

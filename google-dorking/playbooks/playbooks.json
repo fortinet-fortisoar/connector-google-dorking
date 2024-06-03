@@ -2,20 +2,72 @@
   "type": "workflow_collections",
   "data": [
     {
-      "uuid": "83088474-8126-4f0f-b69a-67fcbf5bb95b",
       "@type": "WorkflowCollection",
+      "name": "Sample - Google Dorking - 1.0.0",
+      "description": "Sample playbooks for \"Google Dorking\" connector. If you are planning to use any of the sample playbooks in your environment, ensure that you clone those playbooks and move them to a different collection, since the sample playbook collection gets deleted during connector upgrade and delete.",
+      "visible": true,
+      "image": "data:png;base64,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",
+      "uuid": "83088474-8126-4f0f-b69a-67fcbf5bb95b",
+      "id": 44,
+      "deletedAt": null,
+      "importedBy": [],
+      "recordTags": [
+        "Google",
+        "google-dorking"
+      ],
       "workflows": [
         {
           "@type": "Workflow",
-          "uuid": "51da685b-6d1a-4b93-9248-ad295ce693b6",
+          "triggerLimit": null,
+          "name": "Custom Search",
+          "aliasName": null,
+          "tag": "#Google Dorking",
+          "description": "A custom search refers to the ability to create a personalized search engine tailored to the specific needs of a website's audience, providing a customized and efficient way for users to find content within a website.",
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "remoteExecutableFlag": false,
+          "parameters": [],
+          "synchronous": false,
+          "lastModifyDate": 1717418270,
           "collection": "/api/3/workflow_collections/83088474-8126-4f0f-b69a-67fcbf5bb95b",
+          "versions": [],
+          "triggerStep": "/api/3/workflow_steps/fce45902-09fc-4aaa-a81f-9f03acd39250",
           "steps": [
             {
-              "uuid": "fce45902-09fc-4aaa-a81f-9f03acd39250",
+              "@type": "WorkflowStep",
+              "name": "Custom Search",
+              "description": null,
+              "arguments": {
+                "name": "Google Dorking",
+                "config": "9638cc4c-2e28-4b88-9e2e-a9ab296c3937",
+                "params": {
+                  "q": "kubernetes tutorial",
+                  "cx": "d5b46c84758c340f4",
+                  "num": 10,
+                  "safe": "",
+                  "start": 1,
+                  "exactTerms": "container orchestration",
+                  "excludeTerms": "",
+                  "additional_fields": "{\n  \"fileType\": \"pdf\"\n}"
+                },
+                "version": "1.0.0",
+                "connector": "google-dorking",
+                "operation": "custom_search",
+                "operationTitle": "Custom Search",
+                "step_variables": []
+              },
+              "status": null,
+              "top": "120",
+              "left": "180",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "523e588f-aa96-4073-8a2d-9774fcc9c346"
+            },
+            {
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
-              "status": null,
               "arguments": {
                 "step_variables": {
                   "input": {
@@ -23,73 +75,44 @@
                   }
                 }
               },
-              "left": "20",
-              "top": "20",
-              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
-            },
-            {
-              "uuid": "523e588f-aa96-4073-8a2d-9774fcc9c346",
-              "@type": "WorkflowStep",
-              "name": "Custom Search",
-              "description": null,
               "status": null,
-              "arguments": {
-                "name": "Google Dorking",
-                "config": "",
-                "params": {
-                  "cx": "017576662512468239146:omuauf_lfve",
-                  "q": "lectures",
-                  "num": 10,
-                  "start": 1,
-                  "additional_fields": {
-                    "sort": "date",
-                    "safe": "active"
-                  }
-                },
-                "version": "1.0.0",
-                "connector": "google-dorking",
-                "operation": "custom_search",
-                "operationTitle": "Custom Search"
-              },
-              "left": "188",
-              "top": "120",
-              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+              "top": "20",
+              "left": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62",
+              "group": null,
+              "uuid": "fce45902-09fc-4aaa-a81f-9f03acd39250"
             }
           ],
-          "triggerLimit": null,
-          "description": "A custom search refers to the ability to create a personalized search engine tailored to the specific needs of a website's audience, providing a customized and efficient way for users to find content within a website.",
-          "name": "Custom Search",
-          "tag": "#Google Dorking",
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "name": "Start-> Custom Search",
+              "targetStep": "/api/3/workflow_steps/523e588f-aa96-4073-8a2d-9774fcc9c346",
+              "sourceStep": "/api/3/workflow_steps/fce45902-09fc-4aaa-a81f-9f03acd39250",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "06cd58a9-eba5-4c74-a65f-83ec70c095ae"
+            }
+          ],
+          "groups": [],
+          "priority": null,
+          "uuid": "51da685b-6d1a-4b93-9248-ad295ce693b6",
+          "id": 497,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
           "recordTags": [
             "Google",
             "google-dorking"
-          ],
-          "isActive": false,
-          "debug": false,
-          "singleRecordExecution": false,
-          "parameters": [],
-          "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/fce45902-09fc-4aaa-a81f-9f03acd39250",
-          "routes": [
-            {
-              "uuid": "06cd58a9-eba5-4c74-a65f-83ec70c095ae",
-              "@type": "WorkflowRoute",
-              "label": null,
-              "isExecuted": false,
-              "name": "Start-> Custom Search",
-              "sourceStep": "/api/3/workflow_steps/fce45902-09fc-4aaa-a81f-9f03acd39250",
-              "targetStep": "/api/3/workflow_steps/523e588f-aa96-4073-8a2d-9774fcc9c346"
-            }
           ]
         }
-      ],
-      "name": "Sample - Google Dorking - 1.0.0",
-      "description": "Google Dorking refers to the practice of using advanced search operators in Google's search engine to discover information that may not be readily accessible through conventional search queries.",
-      "visible": true,
-      "recordTags": [
-        "Google",
-        "google-dorking"
       ]
     }
+  ],
+  "exported_tags": [
+    "Google",
+    "google-dorking"
   ]
 }

@@ -60,8 +60,7 @@ def custom_search(config, params):
         if params.get('additional_fields', {}):
             additional_fields = params.pop('additional_fields')
             params.update(additional_fields)
-        if params.get("safe", False):
-            params['safe'] = 'active'
+        params['safe'] = 'active' if params.get('safe') else 'off'
         query_params = {k: v for k, v in params.items() if v is not None and v != ''}
         response = gd.make_rest_call(endpoint, 'GET', params=query_params)
         return response

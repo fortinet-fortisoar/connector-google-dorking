@@ -27,11 +27,10 @@ class GoogleDorking(object):
             headers = {
                 'Content-Type': 'application/json'
             }
-            logger.debug("Endpoint {0}".format(url))
+            logger.debug(f"\nEndpoint: {url}\n")
+            logger.debug(f"\nParams: {params}\n")
             response = requests.request(method, url, data=data, params=params, headers=headers, verify=self.verify_ssl)
-            logger.debug("response_content {0}:{1}".format(response.status_code, response.content))
             if response.ok or response.status_code == 204:
-                logger.info('Successfully got response for url {0}'.format(url))
                 if 'json' in str(response.headers):
                     return response.json()
                 else:
@@ -58,9 +57,11 @@ def custom_search(config, params):
     try:
         gd = GoogleDorking(config)
         endpoint = ''
-        additional_fields = params.pop('additional_fields')
-        if additional_fields:
+        if params.get('additional_fields', {}):
+            additional_fields = params.pop('additional_fields')
             params.update(additional_fields)
+        if params.get("safe", False):
+            params['safe'] = 'active'
         query_params = {k: v for k, v in params.items() if v is not None and v != ''}
         response = gd.make_rest_call(endpoint, 'GET', params=query_params)
         return response
